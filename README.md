@@ -1,21 +1,21 @@
 # vue30day
 
-> A Vue.js project
+> Vue-router build single page
 
 ## Build Setup
 
 ``` bash
-# install dependencies
-npm install
+# 建立pages資料夾，新增hello.vue, CtoF.cue
 
-# serve with hot reload at localhost:8080
-npm run dev
+# 修改 /router/index.js
+修改router配置
 
-# build for production with minification
-npm run build
+# 修改main.js
+app.vue 掛載並 replace index.html 原始掛載點： <div id="app"></div>
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# 修改App.vue
+<router-link :to="{path: '/hello'}">Hello</router-link>
+<router-link :to="{name: 'c2f'}">CtoF</router-link>
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

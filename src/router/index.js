@@ -1,15 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Hello from '../pages/hello.vue'
+import CtoF from '../pages/CtoF.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  base: __dirname,
   routes: [
     {
-      path: '/',
+      path: '/hello',
       name: 'Hello',
-      component: HelloWorld
-    }
+      component: Hello
+    },
+    {
+      path: '/c2f',
+      name: 'c2f',
+      component: CtoF
+    },
+    // router 轉址
+    { path: '/*', redirect: '/hello' }
   ]
 })
