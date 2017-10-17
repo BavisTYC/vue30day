@@ -1,21 +1,17 @@
 # vue30day
 
-> Vue-router build single page
+> 溫度轉換 - v-if, v-show, methods
 
 ## Build Setup
 
 ``` bash
-# 建立pages資料夾，新增hello.vue, CtoF.cue
+# v-if, v-show差別在於是否呈現在browers
+v-if 條件不成立時，元素不會存在browers
+v-show 條件不成立時，元素會以 style=display:none 隱藏於browers
 
-# 修改 /router/index.js
-修改router配置
+# 搞懂 isCelsius 狀態
+預設 isCelsius=false,代表目前頁面顯示為華氏
 
-# 修改main.js
-app.vue 掛載並 replace index.html 原始掛載點： <div id="app"></div>
-
-# 修改App.vue
-<router-link :to="{path: '/hello'}">Hello</router-link>
-<router-link :to="{name: 'c2f'}">CtoF</router-link>
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
